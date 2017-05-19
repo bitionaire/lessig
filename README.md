@@ -1,4 +1,4 @@
-# Lessig
+# lessig
 
 <img alt="logo" src="https://cdn.rawgit.com/bitionaire/lessig/master/lessig.svg" width="311" height="64" />
 
