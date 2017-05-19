@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+var shell = require('shelljs');
+var glob = require('glob-fs')({ gitignore: true });
+
+var args = process.argv.slice(2);
+
+for (var i = 0; i < args.length; i++) {
+  var files = glob.readdirSync(args[i]);
+
+  for (var j = 0; j < files.length; j++) {
+    var binDir = shell.exec('npm bin').stdout;
+    var bin = binDir.slice(0, -1) + '/lessc';
+
+    var outputFile = files[j].replace('.less', '.css');
+
+    shell.exec(bin + ' ' + files[j] + ' ' + outputFile);
+  }
+}

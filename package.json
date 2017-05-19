@@ -1,0 +1,28 @@
+{
+  "name": "lessig",
+  "version": "0.0.1",
+  "description": "Less recursive compiler",
+  "bin": {
+    "lessig": "./bin/lessig"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitionaire/lessig.git"
+  },
+  "author": "bitionaire",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bitionaire/lessig/issues"
+  },
+  "homepage": "https://github.com/bitionaire/lessig#readme",
+  "devDependencies": {
+    "glob-fs": "^0.1.6",
+    "less": "^2.7.2",
+    "node-glob": "^1.2.0",
+    "shelljs": "^0.7.7",
+    "shelljs-nodecli": "^0.1.1"
+  }
+}
