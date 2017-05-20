@@ -16,7 +16,7 @@ for (var i = 0; i < args.length; i++) {
 
     var status = shell.exec(bin + ' ' + files[j] + ' ' + outputFile).code;
     if (status === 0) {
-      log(':white_check_mark: ' + files[j], 'ok');
+      log(files[j], 'ok');
     } else {
       log(':x: ' + files[j], 'err');
     }
