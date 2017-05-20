@@ -9,7 +9,7 @@ for (var i = 0; i < args.length; i++) {
   var files = glob.readdirSync(args[i] + ".less");
 
   for (var j = 0; j < files.length; j++) {
-    var binDir = shell.exec('npm bin').stdout;
+    var binDir = shell.exec('npm bin', { async: false, silent: true }).stdout;
     var bin = binDir.slice(0, -1) + '/lessc';
 
     var outputFile = files[j].replace('.less', '.css');
