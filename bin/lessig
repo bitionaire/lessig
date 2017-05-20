@@ -2,6 +2,7 @@
 
 var shell = require('shelljs');
 var glob = require('glob-fs')({ gitignore: true });
+var log = require('console-emoji');
 
 var args = process.argv.slice(2);
 
@@ -11,9 +12,13 @@ for (var i = 0; i < args.length; i++) {
   for (var j = 0; j < files.length; j++) {
     var binDir = shell.exec('npm bin', { async: false, silent: true }).stdout;
     var bin = binDir.slice(0, -1) + '/lessc';
-
     var outputFile = files[j].replace('.less', '.css');
 
-    shell.exec(bin + ' ' + files[j] + ' ' + outputFile);
+    var status = shell.exec(bin + ' ' + files[j] + ' ' + outputFile).code;
+    if (status === 0) {
+      log(':white_check_mark: ' + files[j], 'ok');
+    } else {
+      log(':x: ' + files[j], 'err');
+    }
   }
 }
