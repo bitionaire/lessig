@@ -6,9 +6,15 @@ Command-line `.less` to `.css` compiler by glob patterns.
 
 ## Usage
 
-Call the tall with one or more [glob patterns](https://github.com/isaacs/node-glob).
-The `.less` suffix will be added to each glob automatically.
+Just call the CLI with the source directory of your less files. All `.less`
+within this directory and all subdirectories will be compiled to `.css` files.
 
 ```bash
-lessig "somedir/**/*"
+lessig ./src
+```
+
+With the `-w` or `--watch` option a watcher task will be started.
+
+```bash
+lessig ./src --watch
 ```
