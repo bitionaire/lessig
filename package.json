@@ -1,6 +1,6 @@
 {
   "name": "lessig",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Less recursive compiler",
   "bin": {
     "lessig": "./bin/lessig"
