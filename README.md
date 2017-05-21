@@ -2,7 +2,7 @@
 
 <img alt="logo" src="https://cdn.rawgit.com/bitionaire/lessig/master/lessig.svg" width="311" height="64" />
 
-Command-line `.less` to `.css` compiler by glob patterns.
+Command-line `.less` to `.css` recursive compiler.
 
 ## Usage
 
