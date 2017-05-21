@@ -1,4 +1,4 @@
-<img alt="logo" src="https://cdn.rawgit.com/bitionaire/lessig/master/lessig.svg" width="311" height="64" />
+<img alt="logo" src="https://cdn.rawgit.com/bitionaire/lessig/master/lessig.png" width="294" height="64" />
 
 Command-line `.less` to `.css` recursive compiler.
 
