@@ -2,7 +2,7 @@
 
 var fs = require('fs');
 var shell = require('shelljs');
-var glob = require('glob-fs')({ gitignore: true });
+var glob = require('glob');
 var log = require('console-emoji');
 var path = require('path');
 var program = require('commander');
@@ -21,10 +21,10 @@ if (!fs.lstatSync(srcDir).isDirectory()) {
 }
 
 var npmBinDir = shell.exec('npm bin', { async: false, silent: true }).stdout;
-var lesscBin = npmBinDir.slice(0, -1) + '/lessc';
+var lesscBin = npmBinDir.slice(0, -1) + path.sep + 'lessc';
 
-var lessPattern = path.join(srcDir, '**/*.less').toString();
-var lessFiles = glob.readdirSync(lessPattern);
+var lessPattern = path.join(srcDir, '**', '*.less').toString();
+var lessFiles = glob.sync(lessPattern);
 
 // compile all files
 for (var j = 0; j < lessFiles.length; j++) {

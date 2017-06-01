@@ -22,7 +22,6 @@
     "chokidar": "^1.7.0",
     "commander": "^2.9.0",
     "console-emoji": "0.0.2",
-    "glob-fs": "^0.1.6",
     "less": "^2.7.2",
     "node-glob": "^1.2.0",
     "shelljs": "^0.7.7",
